@@ -1,0 +1,9 @@
+{
+  "Generate DELETE selectors": {
+    "prefix": "deleteSelectors",
+    "body": [
+      "const makeSelectDelete${1:Feature} = makeSelect('delete${1:Feature}');"
+    ],
+    "description": "Generate DELETE selectors content for a given feature"
+  }
+}

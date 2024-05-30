@@ -1,0 +1,9 @@
+{
+  "Generate POST selectors": {
+    "prefix": "postSelectors",
+    "body": [
+      "const makeSelectPost${1:Feature} = makeSelect('post${1:Feature}');"
+    ],
+    "description": "Generate POST selectors content for a given feature"
+  }
+}

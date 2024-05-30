@@ -1,0 +1,35 @@
+{
+  "Generate reducer.ts content": {
+    "prefix": "reducerts",
+    "body": [
+      "import produce from 'immer';",
+      "",
+      "type Object = {",
+      "  data: any;",
+      "  loading: boolean;",
+      "  success: boolean;",
+      "  error: any;",
+      "};",
+      "",
+      "const state: Object = {",
+      "  data: {},",
+      "  loading: false,",
+      "  success: false,",
+      "  error: null,",
+      "};",
+      "",
+      "export const initialState = {",
+      "  ${1:feature}: state,",
+      "};",
+      "export default produce ((draft, action) => {",
+      "  switch (action.type) {",
+      "",
+      "// Generate Reducer cases by writing ${type}Reducer",
+      "// type is in ['get', 'post', 'put', 'delete']",
+      "",
+      "  }",
+      "}, initialState);"
+    ],
+    "description": "Generate reducer.ts content"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "Generate saga.ts content": {
+    "prefix": "sagats",
+    "body": [
+      "import { put, call, takeLatest } from 'redux-saga/effects';",
+      "import request from 'utils/request';",
+      "",
+      "import { Action } from 'model/Action';",
+      "",
+      "// Generate Saga handlers by writing ${type}Saga",
+      "// type is in ['get', 'post', 'put', 'delete']",
+      "",
+      "export default function* sagaHandler() {",
+      "  yield takeLatest(FEATURE, feature);",
+      "}"
+    ],
+    "description": "Generate saga.ts content"
+  }
+}

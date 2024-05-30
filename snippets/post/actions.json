@@ -1,0 +1,32 @@
+{
+  "Generate POST actions": {
+    "prefix": "postActions",
+    "body": [
+      "export function post${1:Feature}Action(params: any, payload: any) {",
+      "  return {",
+      "    type: POST_${2:FEATURE},",
+      "    params,",
+      "    payload,",
+      "  };",
+      "}",
+      "export function post${1:Feature}SuccessAction(data: any) {",
+      "  return {",
+      "    type: POST_${2:FEATURE}_SUCCESS,",
+      "    data,",
+      "  };",
+      "}",
+      "export function post${1:Feature}ErrorAction(error: any) {",
+      "  return {",
+      "    type: POST_${2:FEATURE}_ERROR,",
+      "    error,",
+      "  };",
+      "}",
+      "export function cleanPost${1:Feature}Action() {",
+      "  return {",
+      "    type: CLEAN_POST_${2:FEATURE},",
+      "  };",
+      "}"
+    ],
+    "description": "Generate POST actions content for a given feature"
+  }
+}

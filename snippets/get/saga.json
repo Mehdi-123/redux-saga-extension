@@ -1,0 +1,17 @@
+{
+  "Generate GET saga": {
+    "prefix": "getSaga",
+    "body": [
+      "export function* get${1:Feature}Saga(action: Action<any, {}>) {",
+      "  const url: string = `${WebService.WS_GET_${2:FEATURE}(action.params)}`;",
+      "  try {",
+      "    const resp = yield call(request.get, url);",
+      "    yield put(get${1:Feature}SuccessAction(resp.data));",
+      "  } catch (error) {",
+      "    yield put(get${1:Feature}ErrorAction(error));",
+      "  }",
+      "}"
+    ],
+    "description": "Generate GET saga content for a given feature"
+  }
+}

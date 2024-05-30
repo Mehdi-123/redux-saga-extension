@@ -1,0 +1,9 @@
+{
+  "Generate GET selectors": {
+    "prefix": "getSelectors",
+    "body": [
+      "const makeSelectGet${1:Feature} = makeSelect('get${1:Feature}');"
+    ],
+    "description": "Generate GET selectors content for a given feature"
+  }
+}

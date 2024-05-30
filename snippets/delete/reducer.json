@@ -1,0 +1,32 @@
+{
+  "Generate DELETE Reducer": {
+    "prefix": "deleteReducer",
+    "body": [
+      "case DELETE_${1:FEATURE}:",
+      "  draft.delete${2:Feature}.data = {};",
+      "  draft.delete${2:Feature}.loading = true",
+      "  draft.delete${2:Feature}.success = false",
+      "  draft.delete${2:Feature}.error = null",
+      "  break;",
+      "case DELETE_${1:FEATURE}_SUCCESS:",
+      "  draft.delete${2:Feature}.data = action.data",
+      "  draft.delete${2:Feature}.loading = false",
+      "  draft.delete${2:Feature}.success = true",
+      "  draft.delete${2:Feature}.error = null",
+      "  break;",
+      "case DELETE_${1:FEATURE}_ERROR:",
+      "  draft.delete${2:Feature}.data = {}",
+      "  draft.delete${2:Feature}.loading = false",
+      "  draft.delete${2:Feature}.success = false",
+      "  draft.delete${2:Feature}.error = action.error",
+      "  break;",
+      "case CLEAN_DELETE_${1:FEATURE}:",
+      "  draft.delete${2:Feature}.data = initialState.delete${2:Feature}.data",
+      "  draft.delete${2:Feature}.loading = initialState.delete${2:Feature}.loading",
+      "  draft.delete${2:Feature}.success = initialState.delete${2:Feature}.success",
+      "  draft.delete${2:Feature}.error = initialState.delete${2:Feature}.error",
+      "  break;"
+    ],
+    "description": "Generate DELETE reducer content for a given feature"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Generate PUT actions": {
+    "prefix": "putActions",
+    "body": [
+      "export function put${1:Feature}Action(params: any, payload: any) {",
+      "  return {",
+      "    type: PUT_${2:FEATURE},",
+      "    params,",
+      "    payload,",
+      "  };",
+      "}",
+      "export function put${1:Feature}SuccessAction(data: any) {",
+      "  return {",
+      "    type: PUT_${2:FEATURE}_SUCCESS,",
+      "    data,",
+      "  };",
+      "}",
+      "export function put${1:Feature}ErrorAction(error: any) {",
+      "  return {",
+      "    type: PUT_${2:FEATURE}_ERROR,",
+      "    error,",
+      "  };",
+      "}",
+      "export function cleanPut${1:Feature}Action() {",
+      "  return {",
+      "    type: CLEAN_PUT_${2:FEATURE},",
+      "  };",
+      "}"
+    ],
+    "description": "Generate PUT actions content for a given feature"
+  }
+}

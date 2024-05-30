@@ -1,0 +1,12 @@
+{
+  "Generate PUT constants": {
+    "prefix": "putConstants",
+    "body": [
+      "export const PUT_${1:FEATURE} = 'app/${3:path}/PUT_${1:FEATURE}';",
+      "export const PUT_${1:FEATURE}_SUCCESS = 'app/${3:path}/PUT_${1:FEATURE}_SUCCESS';",
+      "export const PUT_${1:FEATURE}_ERROR = 'app/${3:path}/PUT_${1:FEATURE}_ERROR';",
+      "export const CLEAN_PUT_${1:FEATURE} = 'app/${3:path}/CLEAN_PUT_${1:FEATURE}';"
+    ],
+    "description": "Generate PUT constants content for a given feature"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Generate PUT Reducer": {
+    "prefix": "putReducer",
+    "body": [
+      "case PUT_${1:FEATURE}:",
+      "  draft.put${2:Feature}.data = {};",
+      "  draft.put${2:Feature}.loading = true",
+      "  draft.put${2:Feature}.success = false",
+      "  draft.put${2:Feature}.error = null",
+      "  break;",
+      "case PUT_${1:FEATURE}_SUCCESS:",
+      "  draft.put${2:Feature}.data = action.data",
+      "  draft.put${2:Feature}.loading = false",
+      "  draft.put${2:Feature}.success = true",
+      "  draft.put${2:Feature}.error = null",
+      "  break;",
+      "case PUT_${1:FEATURE}_ERROR:",
+      "  draft.put${2:Feature}.data = {}",
+      "  draft.put${2:Feature}.loading = false",
+      "  draft.put${2:Feature}.success = false",
+      "  draft.put${2:Feature}.error = action.error",
+      "  break;",
+      "case CLEAN_PUT_${1:FEATURE}:",
+      "  draft.put${2:Feature}.data = initialState.put${2:Feature}.data",
+      "  draft.put${2:Feature}.loading = initialState.put${2:Feature}.loading",
+      "  draft.put${2:Feature}.success = initialState.put${2:Feature}.success",
+      "  draft.put${2:Feature}.error = initialState.put${2:Feature}.error",
+      "  break;"
+    ],
+    "description": "Generate PUT reducer content for a given feature"
+  }
+}

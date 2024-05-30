@@ -1,0 +1,26 @@
+{
+  "Generate selectors.ts content": {
+    "prefix": "selectorsts",
+    "body": [
+      "import { createSelector } from 'reselect';",
+      "import { initialState } from './reducer';",
+      "",
+      "interface State {",
+      "  ${1:feature}: any",
+      "}",
+      "",
+      "const selectState = (state: any): State => state.${2:key} || initialState",
+      "",
+      "const makeSelect = (selector: keyof State) =>",
+      "  createSelector(selectState, substate => substate[selector]);",
+      "",
+      "// Generate Selectors by writing '${type}Selectors'",
+      "// type is in ['get', 'post', 'put', 'delete']",
+      "",
+      "export {",
+      "",
+      "};"
+    ],
+    "description": "Generate selectors.ts content"
+  }
+}

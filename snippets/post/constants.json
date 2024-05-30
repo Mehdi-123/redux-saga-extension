@@ -1,0 +1,12 @@
+{
+  "Generate POST constants": {
+    "prefix": "postConstants",
+    "body": [
+      "export const POST_${1:FEATURE} = 'app/${3:path}/POST_${1:FEATURE}';",
+      "export const POST_${1:FEATURE}_SUCCESS = 'app/${3:path}/POST_${1:FEATURE}_SUCCESS';",
+      "export const POST_${1:FEATURE}_ERROR = 'app/${3:path}/POST_${1:FEATURE}_ERROR';",
+      "export const CLEAN_POST_${1:FEATURE} = 'app/${3:path}/CLEAN_POST_${1:FEATURE}';"
+    ],
+    "description": "Generate POST constants content for a given feature"
+  }
+}

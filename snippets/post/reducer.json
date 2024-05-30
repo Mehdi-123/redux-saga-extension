@@ -1,0 +1,32 @@
+{
+  "Generate POST Reducer": {
+    "prefix": "generateGetReducer",
+    "body": [
+      "case POST_${1:FEATURE}:",
+      "  draft.post${2:Feature}.data = {};",
+      "  draft.post${2:Feature}.loading = true",
+      "  draft.post${2:Feature}.success = false",
+      "  draft.post${2:Feature}.error = null",
+      "  break;",
+      "case POST_${1:FEATURE}_SUCCESS:",
+      "  draft.post${2:Feature}.data = action.data",
+      "  draft.post${2:Feature}.loading = false",
+      "  draft.post${2:Feature}.success = true",
+      "  draft.post${2:Feature}.error = null",
+      "  break;",
+      "case POST_${1:FEATURE}_ERROR:",
+      "  draft.post${2:Feature}.data = {}",
+      "  draft.post${2:Feature}.loading = false",
+      "  draft.post${2:Feature}.success = false",
+      "  draft.post${2:Feature}.error = action.error",
+      "  break;",
+      "case CLEAN_POST_${1:FEATURE}:",
+      "  draft.post${2:Feature}.data = initialState.post${2:Feature}.data",
+      "  draft.post${2:Feature}.loading = initialState.post${2:Feature}.loading",
+      "  draft.post${2:Feature}.success = initialState.post${2:Feature}.success",
+      "  draft.post${2:Feature}.error = initialState.post${2:Feature}.error",
+      "  break;"
+    ],
+    "description": "Generate POST reducer content for a given feature"
+  }
+}

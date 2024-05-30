@@ -1,0 +1,14 @@
+{
+  "Generate constants.ts content": {
+    "prefix": "constantsts",
+    "body": [
+      "export const WebService = {",
+      "  WS_${1:FEATURE}: () => `/v1/${2:url}`",
+      "};",
+      "",
+      "// Generate Constants by writing ${type}Constants",
+      "// type is in ['get', 'post', 'put', 'delete']"
+    ],
+    "description": "Generate constants.ts content"
+  }
+}

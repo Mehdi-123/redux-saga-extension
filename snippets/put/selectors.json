@@ -1,0 +1,9 @@
+{
+  "Generate PUT selectors": {
+    "prefix": "putSelectors",
+    "body": [
+      "const makeSelectPut${1:Feature} = makeSelect('put${1:Feature}');"
+    ],
+    "description": "Generate PUT selectors content for a given feature"
+  }
+}

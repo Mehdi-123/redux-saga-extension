@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# code editor
+/.vscode
+.vscode
+.vscode-test.mjs
+.vscodeignore
+
+# extension quickstart
+/vsc-extension-quickstart.md
+
+# vsix extension file
+/redux-saga-features-generator-0.0.1.vsix

@@ -1,0 +1,17 @@
+{
+  "Generate PUT saga": {
+    "prefix": "putSaga",
+    "body": [
+      "export function* put${1:Feature}Saga(action: Action<any, {}>) {",
+      "  const url: string = `${WebService.WS_PUT_${2:FEATURE}(action.params)}`;",
+      "  try {",
+      "    const resp = yield call(request.put, url, action.payload);",
+      "    yield put(put${1:Feature}SuccessAction(resp.data));",
+      "  } catch (error) {",
+      "    yield put(put${1:Feature}ErrorAction(error));",
+      "  }",
+      "}"
+    ],
+    "description": "Generate PUT saga content for a given feature"
+  }
+}

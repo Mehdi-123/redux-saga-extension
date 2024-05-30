@@ -1,0 +1,134 @@
+{
+  "name": "redux-saga-features-generator",
+  "displayName": "Redux Saga Features Generator",
+  "description": "generate redux saga constants, actions, reducer, saga & selectors immediatly",
+  "version": "1.0.0",
+  "publisher": "ElMehdiAzhoune",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/get/actions.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/get/constants.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/get/reducer.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/get/saga.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/get/selectors.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/post/actions.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/post/constants.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/post/reducer.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/post/saga.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/post/selectors.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/put/actions.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/put/constants.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/put/reducer.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/put/saga.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/put/selectors.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/delete/actions.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/delete/constants.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/delete/reducer.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/delete/saga.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/delete/selectors.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/constantsts.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/reducerts.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/sagats.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/selectorsts.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.50.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Generate DELETE constants": {
+    "prefix": "deleteConstants",
+    "body": [
+      "export const DELETE_${1:FEATURE} = 'app/${3:path}/DELETE_${1:FEATURE}';",
+      "export const DELETE_${1:FEATURE}_SUCCESS = 'app/${3:path}/DELETE_${1:FEATURE}_SUCCESS';",
+      "export const DELETE_${1:FEATURE}_ERROR = 'app/${3:path}/DELETE_${1:FEATURE}_ERROR';",
+      "export const CLEAN_DELETE_${1:FEATURE} = 'app/${3:path}/CLEAN_DELETE_${1:FEATURE}';"
+    ],
+    "description": "Generate DELETE constants content for a given feature"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Generate GET Reducer": {
+    "prefix": "getReducer",
+    "body": [
+      "case GET_${1:FEATURE}:",
+      "  draft.get${2:Feature}.data = {};",
+      "  draft.get${2:Feature}.loading = true",
+      "  draft.get${2:Feature}.success = false",
+      "  draft.get${2:Feature}.error = null",
+      "  break;",
+      "case GET_${1:FEATURE}_SUCCESS:",
+      "  draft.get${2:Feature}.data = action.data",
+      "  draft.get${2:Feature}.loading = false",
+      "  draft.get${2:Feature}.success = true",
+      "  draft.get${2:Feature}.error = null",
+      "  break;",
+      "case GET_${1:FEATURE}_ERROR:",
+      "  draft.get${2:Feature}.data = {}",
+      "  draft.get${2:Feature}.loading = false",
+      "  draft.get${2:Feature}.success = false",
+      "  draft.get${2:Feature}.error = action.error",
+      "  break;",
+      "case CLEAN_GET_${1:FEATURE}:",
+      "  draft.get${2:Feature}.data = initialState.get${2:Feature}.data",
+      "  draft.get${2:Feature}.loading = initialState.get${2:Feature}.loading",
+      "  draft.get${2:Feature}.success = initialState.get${2:Feature}.success",
+      "  draft.get${2:Feature}.error = initialState.get${2:Feature}.error",
+      "  break;"
+    ],
+    "description": "Generate GET reducer content for a given feature"
+  }
+}
