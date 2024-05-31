@@ -1,6 +1,6 @@
 {
   "Generate POST Reducer": {
-    "prefix": "generateGetReducer",
+    "prefix": "postReducer",
     "body": [
       "case POST_${1:FEATURE}:",
       "  draft.post${2:Feature}.data = {};",

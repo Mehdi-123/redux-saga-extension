@@ -134,5 +134,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Mehdi-123/redux-saga-extension.git"
-  }
+  },
+  "icon": "images/extension-logo.png"
 }
